@@ -31,6 +31,10 @@ app.use("/v1/api", boardRoutes);
 app.use("/v1/api", columnRoutes);
 app.use("/v1/api", cardRoutes);
 
+app.get("/",(req,res)=>{
+  res.send('Api trello running ')
+})
+
 // testconnection
 let testConnect = async () => {
   try {

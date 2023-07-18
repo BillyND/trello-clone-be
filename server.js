@@ -4,8 +4,8 @@ const port = process.env.PORT || 3000;
 const hostname = process.env.HOST_NAME;
 const { connection } = require("./src/config/database");
 const app = express();
-const boardRoutes = require("./src/routes/cardRoutes");
-const columnRoutes = require("./src/routes/cardRoutes");
+const boardRoutes = require("./src/routes/boardRoutes");
+const columnRoutes = require("./src/routes/columnRoutes");
 const cardRoutes = require("./src/routes/cardRoutes");
 const cors = require("cors");
 

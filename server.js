@@ -2,11 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const port = process.env.PORT || 3000;
 const hostname = process.env.HOST_NAME;
-const { connection } = require("./config/database");
+const { connection } = require("./src/config/database");
 const app = express();
-const boardRoutes = require("./routes/boadRoutes");
-const columnRoutes = require("./routes/columnRoutes");
-const cardRoutes = require("./routes/cardRoutes");
+const boardRoutes = require("./src/routes/cardRoutes");
+const columnRoutes = require("./src/routes/cardRoutes");
+const cardRoutes = require("./src/routes/cardRoutes");
 const cors = require("cors");
 
 const corsOptions = {
@@ -31,11 +31,11 @@ app.use("/v1/api", boardRoutes);
 app.use("/v1/api", columnRoutes);
 app.use("/v1/api", cardRoutes);
 
-app.get("/",(req,res)=>{
-  res.send('Api trello running ')
-})
+app.get("/", (req, res) => {
+  res.send("Api trello running ");
+});
 
-// testconnection
+// testConnection
 let testConnect = async () => {
   try {
     await connection();

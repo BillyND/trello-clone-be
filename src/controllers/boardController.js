@@ -1,7 +1,6 @@
 const Board = require("../models/Board");
 
 const getAllBoard = async (req, res) => {
-  console.log(">>>ok");
   try {
     const resAllBoard = await Board.find({});
     return res.status(200).json({
